@@ -29,16 +29,6 @@
                     {{ itemPerpage }}
                   </option>
                 </template>
-
-                <!-- <option value="2">2</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="75">75</option>
-                <option value="100">100</option> -->
               </select>
               {{
                 language.afterTextPerpages
@@ -298,8 +288,6 @@ import Axios from "axios";
 export default {
   data() {
     return {
-      // Items TO Display For Each Paginated Page
-      itemsPerPage: 1,
       // Current Page Number In Pagination
       currentPage: 1,
       // Current Page Items
@@ -334,6 +322,11 @@ export default {
     url: {
       type: String,
       default: () => "",
+    },
+    // Items TO Display For Each Paginated Page
+    itemsPerPage: {
+      type: Number,
+      default: () => 1,
     },
     // Class main
     classMain: {
