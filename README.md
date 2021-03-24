@@ -11,7 +11,7 @@ Vue2 dataTable fullOption custome language
           :classTable="'loss mt-20'"
           :language="language"
           :arrayPerPage="arrayPerPage"
-          :itemsPerPage="10"
+          :defaultItemsPerPage="10"
         ></datatable>
   </template>
   <script>
